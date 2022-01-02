@@ -1,0 +1,16 @@
+{%  extends "base.html" %}  
+{%block content%}
+
+<div style="background: cadetblue"; >
+<div style="text-align: center;">
+    <h1 style="color: darkred;">student-form</h1>
+</div>    
+<div style="text-align: center;">
+<form action="" method="POST" style="color: blue;">
+    {{student_form.as_p}}
+    {% csrf_token %}
+    <input type="submit" name="submit" value="add">
+</form>
+</div>
+</div>
+{%endblock%}

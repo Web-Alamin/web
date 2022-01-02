@@ -1,0 +1,24 @@
+{%  extends "base.html" %}  
+{%block content%}
+<div style="text-align: center;">
+<h1 style="color: darkmagenta;">Index</h1>
+</div>
+
+<ul style="text-align: center;">
+    
+{% if student_list %}
+{%for student in student_list %}
+
+<div>
+<a href= "{% url 'student_info' student_id=student.id %}">{{student.first_name}} {{student.last_name}}</a>
+</div>
+{% endfor %}
+{% else %}
+
+    <h1>No Student</h1>
+{% endif %}
+
+</ul>
+</div>
+
+{%endblock%}
